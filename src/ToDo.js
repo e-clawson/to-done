@@ -2,7 +2,7 @@ import { ReactSVG} from "react";
 
 const ToDo = ({todo}) => {
     return (
-        <div>
+        <div className={todo.complete ? "strike" : ""}>
             {todo.task}
         </div>
     );
