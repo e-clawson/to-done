@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import data from "./data.json"
-import './App.css';
 import { Header } from './Header';
 import ToDoList from "./ToDoList"
+import ToDoForm from './ToDoForm';
+
 
 
 function App() {
@@ -20,6 +21,13 @@ function App() {
       return !task.complete
     });
     setToDoList(filtered);
+  }
+
+  const addTask = (userInput) => {
+    let copy = [...toDoList];
+    copy = [...copy, {id: toDoList.length +1, task: userInput, complete: false }];
+    setToDoList(copy);
+    copy.push({id: toDoList.length +1, task: userInput, complete: false });
   }
   
   return (
