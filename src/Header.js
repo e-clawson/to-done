@@ -1,8 +1,8 @@
-export const Header = ({pageName, slogan}) => {
+export const Header = () => {
     return (
         <div>
-            <h1>{pageName}</h1>
-            <h2>{slogan}</h2>
+            <h1>To-Done!</h1>
+            <h2>Track your tasks, completed and in progress</h2>
         </div>
     )
 }

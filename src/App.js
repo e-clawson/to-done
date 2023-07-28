@@ -10,7 +10,7 @@ function App() {
 
   const handleToggle = (id) => {
     let mapped = toDoList.map (task => {
-      return task.id == id ? { ...task, complete: !task.complete } : { ...task};
+      return task.id === id ? { ...task, complete: !task.complete } : { ...task};
     });
     setToDoList(mapped);
   }
@@ -24,8 +24,8 @@ function App() {
   
   return (
     <div className="App">
-      <Header pageName= "To-Done!" slogan= "Track your progress!"/>
-      <ToDoList toDoList={toDoList}/>
+      <Header/>
+      <ToDoList toDoList={toDoList} handleToggle={handleToggle} handleFilter={handleFilter}/>
     </div>
   );
 }
